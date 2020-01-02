@@ -1,0 +1,63 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgresql
+  labels:
+    app: goupaz
+spec:
+  ports:
+    - port: 5432
+      targetPort: 5432
+      nodePort: 31001
+  type: NodePort     
+  selector:
+    app: goupaz
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: postgres-claim
+  labels:
+    app: goupaz
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: postgresql
+  labels:
+    app: goupaz
+spec:
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: goupaz
+    spec:
+      containers:
+        - image: postgres:9.6.2-alpine
+          name: postgresql
+          env:
+            - name: POSTGRES_USER
+              value: goupaz
+            - name: POSTGRES_DB
+              value: goupaz_db
+            - name: POSTGRES_PASSWORD
+              value: goupaz
+          ports:
+            - containerPort: 5432
+              name: postgresql
+          volumeMounts:
+            - name: postgresql
+              mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: postgresql
+          persistentVolumeClaim:
+            claimName: postgres-claim
