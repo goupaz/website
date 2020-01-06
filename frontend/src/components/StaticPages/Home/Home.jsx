@@ -70,9 +70,9 @@ class Home extends Component {
       <div className="homepage-first-item">
         <div className="content-big-container">
           <div className="content-container">
-            <h4>Simplify your job hunt!</h4>
+            <h4>Azeri Community across the world</h4>
             <p className="small-text">
-              Track your application progress in a seamless and intuitive way.
+              Promising people with unpromising ideas!
             </p>
             <div className="buttons-container">
               <Button
@@ -89,17 +89,17 @@ class Home extends Component {
         </div>
         <div className="image-big-container">
           <div className="image-container">
-            <img
+            {/* <img
               className="envelopes"
               src={
                 window.location.origin +
                 "/src/assets/images/gmail_envelopes.png"
               }
-            ></img>
+            ></img> */}
             <img
               className="dashboard-main"
               src={
-                window.location.origin + "/src/assets/images/dashboard_main.png"
+                window.location.origin + "/src/assets/images/banner.png"
               }
             ></img>
           </div>

@@ -1,6 +1,6 @@
-export const apiRoot = "https://jts-be.jobhax.com"; //"https://jts-be.jobhax.com"; //"http://10.0.0.77:8000"; //"http://0.0.0.0:8000";
+export const apiRoot = "http://0.0.0.0:8000" //"https://jts-be.jobhax.com"; //"https://jts-be.jobhax.com"; //"http://10.0.0.77:8000"; //"http://0.0.0.0:8000";
 
-export const jobPostingApiRoot = "https://ats-be.jobhax.com";
+export const jobPostingApiRoot = "http://0.0.0.0:8000";
 
 //USER REQUESTS//
 export const USERS = type => `${apiRoot}/api/users/${type}/`;

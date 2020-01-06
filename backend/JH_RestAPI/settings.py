@@ -30,7 +30,7 @@ DEBUG = os.environ.get('DEBUG','False')
 
 # can change the ip for local testing
 ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'localhost', '10.0.0.75']
-SITE_URL = 'jobhax.com'
+SITE_URL = 'goupaz.com'
 CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
@@ -192,9 +192,10 @@ WSGI_APPLICATION = 'JH_RestAPI.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME','jobhaxdb'),
-        'USER': os.environ.get('DB_USER','jobhaxdbuser'),
+        'NAME': os.environ.get('DB_NAME',''),
+        'USER': os.environ.get('DB_USER',''),
         'PASSWORD': os.environ.get('DB_PWD',''),
+        'PORT': os.environ.get('DB_PORT','31001'),
         'HOST': os.environ.get('DB_HOST','localhost')
     }
 }

@@ -178,7 +178,9 @@ class Header extends Component {
         <Menu.Item key="/dashboard">Dashboard</Menu.Item>
         <Menu.Item key="/metrics">Metrics</Menu.Item>
         <Menu.Item key="/companies">Companies</Menu.Item>
-        <Menu.Item key="/jobs">Jobs</Menu.Item>
+        <Menu.Item key="/jobs">Call for Paper</Menu.Item>
+        <Menu.Item key="/blogs">Blog</Menu.Item>
+        <Menu.Item key="/events">Events</Menu.Item>
       </SubMenu>
     );
 
@@ -332,7 +334,16 @@ class Header extends Component {
               this.setState({ current: "/aboutus", request: true })
             }
           >
-            About us
+            About
+          </div>
+          <div
+            className="option"
+            onClick={() =>
+              functional &&
+              this.setState({ current: "/aboutus", request: true })
+            }
+          >
+            Projects
           </div>
         </div>
         <div className="right-container out">
