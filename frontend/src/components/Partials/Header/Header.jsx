@@ -334,7 +334,7 @@ class Header extends Component {
               this.setState({ current: "/aboutus", request: true })
             }
           >
-            About
+            Team
           </div>
           <div
             className="option"
@@ -343,7 +343,25 @@ class Header extends Component {
               this.setState({ current: "/aboutus", request: true })
             }
           >
-            Projects
+            02Hero
+          </div>
+          <div
+            className="option"
+            onClick={() =>
+              functional &&
+              this.setState({ current: "/aboutus", request: true })
+            }
+          >
+            Techbrains
+          </div>
+          <div
+            className="option"
+            onClick={() =>
+              functional &&
+              this.setState({ current: "/aboutus", request: true })
+            }
+          >
+            Kiss Conf
           </div>
         </div>
         <div className="right-container out">

@@ -30,7 +30,7 @@ class Home extends Component {
         size="large"
         onClick={() => this.setState({ redirect: redirect })}
       >
-        Sign up for free
+        Read More
       </Button>
     );
   }
@@ -70,11 +70,11 @@ class Home extends Component {
       <div className="homepage-first-item">
         <div className="content-big-container">
           <div className="content-container">
-            <h4>Azeri Community across the world</h4>
+            <h4>Azerbaijani Tech Community</h4>
             <p className="small-text">
               Promising people with unpromising ideas!
             </p>
-            <div className="buttons-container">
+            {/* <div className="buttons-container">
               <Button
                 onClick={() =>
                   this.setState({ redirect: "/demo?type=student" })
@@ -84,7 +84,7 @@ class Home extends Component {
                 Try it out!
               </Button>
               {this.generateSignupButton()}
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="image-big-container">
@@ -112,15 +112,15 @@ class Home extends Component {
     return (
       <div className="how_it_works_area" id="howitworks">
         {this.generateInteriorItem(
-          "/src/assets/images/mail_parse.png",
-          "Create a card for each application",
-          "Apply anywhere - get it tracked in one place. Automatically."
+          "/src/assets/images/chapter01.png",
+          "02hero",
+          "Get mentored by top tech community members."
         )}
         {window.screen.availWidth > 800
           ? this.generateInteriorItemFlipLR(
-              "/src/assets/images/move.png",
-              "Organize your job hunting progress",
-              "Application process is visualized like no spreadsheet can do."
+              "/src/assets/images/companies.png",
+              "Techbrains",
+              "Building collaborative community culture."
             )
           : this.generateInteriorItem(
               "/src/assets/images/move.png",
@@ -128,9 +128,9 @@ class Home extends Component {
               "Application process is visualized like no spreadsheet can do."
             )}
         {this.generateInteriorItem(
-          "/src/assets/images/metrics.png",
-          "Leverage data to step up your job search game",
-          "Hiring trends, skill analysis, interview success rate to help you hunt like a pro."
+          "/src/assets/images/kiss.png",
+          "Kiss Conf",
+          "Keep it stupid simple. No more boring conferences."
         )}
       </div>
     );
@@ -183,8 +183,8 @@ class Home extends Component {
       <div className="how_it_works_area" id="howitworks">
         {this.generateInteriorItem(
           "/src/assets/images/mail_parse.png",
-          "Create a card for each application",
-          "Apply anywhere - get it tracked in one place. Automatically."
+          "02hero",
+          ""
         )}
         {window.screen.availWidth > 800
           ? this.generateInteriorItemFlipLR(
@@ -198,9 +198,9 @@ class Home extends Component {
               "Application process is visualized like no spreadsheet can do."
             )}
         {this.generateInteriorItem(
-          "/src/assets/images/metrics.png",
-          "Leverage data to step up your job search game",
-          "Hiring trends, skill analysis, interview success rate to help you hunt like a pro."
+          "/src/assets/images/kiss.png",
+          "K.I.S.S - Keep it stupid simple",
+          "No more boring conferences."
         )}
       </div>
     );
