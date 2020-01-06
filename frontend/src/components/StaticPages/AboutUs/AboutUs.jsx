@@ -84,32 +84,32 @@ const videosList = [
 ];
 
 class AboutUs extends Component {
-  generateCarouselArea() {
-    const list = [];
-    for (let i = 1; i < 64; i++) {
-      if (i < 10) {
-        list.push("/media/aboutus00" + i.toString() + ".jpg");
-      } else {
-        list.push("/media/aboutus0" + i.toString() + ".jpg");
-      }
-    }
-    const media = list.map(photo => {
-      return (
-        <div key={list.indexOf(photo)} className="carousel-image">
-          <img src={apiRoot + photo} />
-        </div>
-      );
-    });
+  // generateCarouselArea() {
+  //   const list = [];
+  //   for (let i = 1; i < 64; i++) {
+  //     if (i < 10) {
+  //       list.push("/media/aboutus00" + i.toString() + ".jpg");
+  //     } else {
+  //       list.push("/media/aboutus0" + i.toString() + ".jpg");
+  //     }
+  //   }
+  //   const media = list.map(photo => {
+  //     return (
+  //       <div key={list.indexOf(photo)} className="carousel-image">
+  //         <img src={apiRoot + photo} />
+  //       </div>
+  //     );
+  //   });
 
-    return (
-      <div>
-        <div className="carousel-container">
-          <Carousel autoplay={true}>{media}</Carousel>
-        </div>
-        <div className="carousel-area-height"></div>
-      </div>
-    );
-  }
+  //   return (
+  //     <div>
+  //       <div className="carousel-container">
+  //         <Carousel autoplay={true}>{media}</Carousel>
+  //       </div>
+  //       <div className="carousel-area-height"></div>
+  //     </div>
+  //   );
+  // }
 
   generateIntro() {
     const quoteList = [
@@ -229,10 +229,10 @@ class AboutUs extends Component {
     return (
       <div className="about-us-container">
         <div>
-          {this.generateCarouselArea()}
+          {/* {this.generateCarouselArea()} */}
           {this.generateIntro()}
           {this.generateTeam()}
-          {this.generateVideosArea()}
+          {/* {this.generateVideosArea()} */}
         </div>
         <div style={{ marginTop: 100 }}>
           <Footer />

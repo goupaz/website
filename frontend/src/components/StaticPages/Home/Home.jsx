@@ -111,27 +111,32 @@ class Home extends Component {
   generateHowItWorksArea() {
     return (
       <div className="how_it_works_area" id="howitworks">
-        {this.generateInteriorItem(
+          {/* {this.generateInteriorItem(
           "/src/assets/images/chapter01.png",
           "02hero",
           "Get mentored by top tech community members."
-        )}
+        )} */}
+       
         {window.screen.availWidth > 800
-          ? this.generateInteriorItemFlipLR(
+          ? this.generateInteriorItem(
               "/src/assets/images/companies.png",
-              "Techbrains",
-              "Building collaborative community culture."
+              "Mission",
+              "Build egoless, collaborative, competent, decentralized, scalable, fun community culture."
+             
             )
           : this.generateInteriorItem(
               "/src/assets/images/move.png",
               "Organize your job hunting progress",
               "Application process is visualized like no spreadsheet can do."
             )}
-        {this.generateInteriorItem(
+            {/* {this.generateInteriorItem(
           "/src/assets/images/kiss.png",
           "Kiss Conf",
           "Keep it stupid simple. No more boring conferences."
-        )}
+        )} */}
+            
+      
+        
       </div>
     );
   }
