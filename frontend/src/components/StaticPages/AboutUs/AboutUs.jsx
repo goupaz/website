@@ -196,7 +196,7 @@ class AboutUs extends Component {
     return (
       <div className="team-container">
         <div className="section-title">WE ARE</div>
-        <div className="header">Our Team</div>
+        <div className="header">Team</div>
         <div className="team-members">
           {team_first.map(member => {
             return person(member);
@@ -230,7 +230,7 @@ class AboutUs extends Component {
       <div className="about-us-container">
         <div>
           {/* {this.generateCarouselArea()} */}
-          {this.generateIntro()}
+          {/* {this.generateIntro()} */}
           {this.generateTeam()}
           {/* {this.generateVideosArea()} */}
         </div>
